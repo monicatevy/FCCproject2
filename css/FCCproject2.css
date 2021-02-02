@@ -1,0 +1,21 @@
+html * {
+  background-color: #E6F1F0;
+  font-family: 'Open Sans',Helvetica;
+  color: #202124;
+
+}
+
+#title {
+
+}
+
+#description {
+  font-family: 'Raleway';
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
