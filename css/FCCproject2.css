@@ -1,8 +1,14 @@
-html * {
-  background-color: #E6F1F0;
-  font-family: 'Open Sans',Helvetica;
-  color: #202124;
+:root {
+  --green: #236c58;
+  --darkergreen: #084938;
+  --blue: #E6F1F0
+}
 
+html * {
+  background-color: var(--blue);
+  font-family: 'Open Sans',Helvetica, sans-serif;
+  color: #202124;
+  box-sizing: border-box;
 }
 
 #title {
@@ -11,6 +17,7 @@ html * {
 
 #description {
   font-family: 'Raleway';
+  font-weight: bolder;
 }
 
 .center{
@@ -18,4 +25,205 @@ html * {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.divcontainer {
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text], input[type=email], input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.small {
+  font-size: smaller;
+  margin-left: 0.25rem;
+}
+
+/* RADIO BUTTON Customize the label */
+.lblradio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.lblradio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radiocheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.lblradio:hover input ~ .radiocheckmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.lblradio input:checked ~ .radiocheckmark {
+  background-color: var(--green);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiocheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.lblradio input:checked ~ .radiocheckmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.lblradio .radiocheckmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* CHECKBOX Customize the label */
+.lblcheckbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.lblcheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.boxcheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.lblcheckbox:hover input ~ .boxcheckmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.lblcheckbox input:checked ~ .boxcheckmark {
+  background-color: var(--green);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.boxcheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.lblcheckbox input:checked ~ .boxcheckmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.lblcheckbox .boxcheckmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#products {
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(var(--darkergreen), var(--darkergreen)), linear-gradient(var(--blue), var(--blue));
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out;
+}
+
+#products:focus {
+  background-size: 100% 2px, auto;
+  border-bottom: var(--darkergreen);
+}
+
+#suggestion {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: var(--green);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--darkergreen);
+}
+
+#author {
+  font-family: 'Raleway', Helvetica;
+  margin: 1.2% 0% 2% 0%;
+  text-align: center;
+}
+
+#author:hover {
+  color: var(--darkergreen);
 }
