@@ -1,14 +1,18 @@
 :root {
   --green: #236c58;
   --darkergreen: #084938;
-  --blue: #E6F1F0
+  --blue: #E6F1F0;
+  --beige: #FFFAF6;
 }
 
 html * {
-  background-color: var(--blue);
   font-family: 'Open Sans',Helvetica, sans-serif;
   color: #202124;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
 }
 
 #title {
@@ -28,10 +32,29 @@ html * {
 }
 
 .divcontainer {
+  /*
   border-radius: 5px;
   padding: 20px;
   display: flex;
   justify-content: center;
+  box-shadow: 18px 5px 5px white;
+  */
+  background-color: var(--beige);
+  border-radius: 45px;
+  margin: -5px 200px 60px 200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-group {
+  display: block;
+  justify-content: center;
+  margin: 40px 100px 0px 100px;
 }
 
 input[type=text], input[type=email], input[type=number], select {
@@ -47,6 +70,11 @@ input[type=text], input[type=email], input[type=number], select {
 .small {
   font-size: smaller;
   margin-left: 0.25rem;
+  color: red;
+}
+
+#number-label .small {
+  color: gray;
 }
 
 /* RADIO BUTTON Customize the label */
@@ -76,18 +104,18 @@ input[type=text], input[type=email], input[type=number], select {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #fff;
+  background-color: lightgray;
   border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .lblradio:hover input ~ .radiocheckmark {
-  background-color: #ccc;
+  background-color: var(--green);
 }
 
 /* When the radio button is checked, add a blue background */
 .lblradio input:checked ~ .radiocheckmark {
-  background-color: var(--green);
+  background-color: var(--darkergreen);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -104,12 +132,12 @@ input[type=text], input[type=email], input[type=number], select {
 
 /* Style the indicator (dot/circle) */
 .lblradio .radiocheckmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 /* CHECKBOX Customize the label */
@@ -141,18 +169,18 @@ input[type=text], input[type=email], input[type=number], select {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #fff;
+  background-color: lightgray;
   border-radius: 5px;
 }
 
 /* On mouse-over, add a grey background color */
 .lblcheckbox:hover input ~ .boxcheckmark {
-  background-color: #ccc;
+  background-color: var(--green);
 }
 
 /* When the checkbox is checked, add a blue background */
 .lblcheckbox input:checked ~ .boxcheckmark {
-  background-color: var(--green);
+  background-color: var(--darkergreen);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -185,7 +213,7 @@ input[type=text], input[type=email], input[type=number], select {
   outline: none;
   border-radius: 0px;
   border-bottom: 1px solid #ccc;
-  background-image: linear-gradient(var(--darkergreen), var(--darkergreen)), linear-gradient(var(--blue), var(--blue));
+  background-image: linear-gradient(var(--darkergreen), var(--darkergreen)), linear-gradient(var(--beige), var(--beige));
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -208,9 +236,9 @@ input[type=submit] {
   background-color: var(--green);
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 40px 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 45px;
   cursor: pointer;
 }
 

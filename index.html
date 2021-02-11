@@ -21,185 +21,216 @@
     ----------------------------------------------------------------->
   </head>
   <body>
+    <div class="divcontainer">
     <img class="center" src="https://www.netguru.com/hs-fs/hubfs/release-sl.gif?width=653&name=release-sl.gif" alt="slack illustration">
-    <h1 class="center" id="title">Market Research Survey Form DOMREI</h1>
-    <p class="center" id="description">Created in 1999, DOMREI is an online store allowing you to find exclusive
+
+    <div class="form-group">
+      <h1 id="title">Market Research Survey Form DOMREI</h1>
+      <p id="description">Created in 1999, DOMREI is an online store allowing you to find exclusive
                                         products directly from Southeast Asia (Cambodia, Thailand, Vietnam, Laos).
                                         We want to support and make accessible the culture, the know-how, craftsmanship and
                                         local entrepreneurship of the region through selective and customizable products.</p>
-    <div class="divcontainer">
+    </div>
       <form id="survey-form">
-        <label for="name" id="name-label">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required></br>
-        <label for="email" id="email-label">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your Email" required></br>
-        <label for="age" id="number-label">Age<span class="small">(optional)</span></label>
-        <input type="number" min="13" max="90" id="number" name="age" placeholder="Age"></br>
+        <div class="form-group">
+          <label for="name" id="name-label">Name<span class="small">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email<span class="small">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="age" id="number-label">Age<span class="small">(optional)</span></label>
+          <input type="number" min="13" max="90" id="number" name="age" placeholder="Age">
+        </div>
 
-        <p>Are you Asian ?</p>
-        <label class="lblradio">Yes
-          <input type="radio" name="asian" required>
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">No
-          <input type="radio" name="asian">
-          <span class="radiocheckmark"></span>
-        </label></br>
+        <div class="form-group">
+          <p>Are you Asian ?<span class="small">*</span></p>
+          <label class="lblradio">Yes
+            <input type="radio" name="asian" value="yes" required>
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">No
+            <input type="radio" name="asian" value="no">
+            <span class="radiocheckmark"></span>
+          </label>
+        </div>
 
-        <p>Are you...</p>
-        <label class="lblradio">Male
-          <input type="radio" name="gender" required>
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">Female
-          <input type="radio" name="gender">
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">Other
-          <input type="radio" name="gender">
-          <span class="radiocheckmark"></span>
-        </label></br>
+        <div class="form-group">
+          <p>Are you...<span class="small">*</span></p>
+          <label class="lblradio">Male
+            <input type="radio" name="gender" value="male" required>
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">Female
+            <input type="radio" name="gender" value="female">
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">Other
+            <input type="radio" name="gender" value="other">
+            <span class="radiocheckmark"></span>
+          </label>
+        </div>
 
-        <p>Have you ever traveled to South East Asia ?</p>
-        <label class="lblradio">Yes
-          <input type="radio" name="traveled" required>
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">No
-          <input type="radio" name="traveled">
-          <span class="radiocheckmark"></span>
-        </label></br>
+        <div class="form-group">
+          <p>Have you ever traveled to South East Asia ?<span class="small">*</span></p>
+          <label class="lblradio">Yes
+            <input type="radio" name="traveled" value="yes" required>
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">No
+            <input type="radio" name="traveled" value="no">
+            <span class="radiocheckmark"></span>
+          </label>
+        </div>
 
-        <p>Have you ever lived in South East Asia ?</p>
-        <label class="lblradio">Yes
-          <input type="radio" name="lived" required>
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">No
-          <input type="radio" name="lived">
-          <span class="radiocheckmark"></span>
-        </label></br>
+        <div class="form-group">
+          <p>Have you ever lived in South East Asia ?<span class="small">*</span></p>
+          <label class="lblradio">Yes
+            <input type="radio" name="lived" value="yes" required>
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">No
+            <input type="radio" name="lived" value="no">
+            <span class="radiocheckmark"></span>
+          </label>
+        </div>
 
-        <label for="product">What do you like the most from South-East Asia ?</label></br>
-        <select name="product" id="dropdown" required>
-          <option value="culture">Culture</option>
-          <option value="food">Food</option>
-          <option value="local">Local products (non-food)</option>
-          <option value="idk">I don't know South-East Asia enough.</option>
-          <option value="other">Other</option>
-        </select></br>
+        <div class="form-group">
+          <label for="product">What do you like the most from South-East Asia ?<span class="small">*</span></label>
+          <select name="product" id="dropdown" required>
+            <option value="culture">Culture</option>
+            <option value="food">Food</option>
+            <option value="local">Local products (non-food)</option>
+            <option value="idk">I don't know South-East Asia enough.</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
-        <p>How would you describe products "Made in Cambodia / Thailand / Vietnam / Laos" ?</p>
-        <label class="lblcheckbox">Traditional
-          <input type="checkbox" value="traditionnal">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Handmade
-          <input type="checkbox" value="handmade">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Orginal
-          <input type="checkbox" value="original">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Good Quality
-          <input type="checkbox" value="goodquality">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Low Quality
-          <input type="checkbox" value=lowquality>
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Cheap
-          <input type="checkbox" value="cheap">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Souvenir
-          <input type="checkbox" value="souvenir">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Nostalgia
-          <input type="checkbox" value="nostalgia">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Childhood
-          <input type="checkbox" value="childhood">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Symbolic
-          <input type="checkbox" value="symbolic">
-          <span class="boxcheckmark"></span>
-        </label>
+        <div class="form-group">
+          <p>How would you describe products "Made in Cambodia / Thailand / Vietnam / Laos" ?<span class="small">*</span></p>
+          <label class="lblcheckbox">Traditional
+            <input type="checkbox" value="traditionnal">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Handmade
+            <input type="checkbox" value="handmade">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Orginal
+            <input type="checkbox" value="original">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Good Quality
+            <input type="checkbox" value="goodquality">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Low Quality
+            <input type="checkbox" value=lowquality>
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Cheap
+            <input type="checkbox" value="cheap">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Souvenir
+            <input type="checkbox" value="souvenir">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Nostalgia
+            <input type="checkbox" value="nostalgia">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Childhood
+            <input type="checkbox" value="childhood">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Symbolic
+            <input type="checkbox" value="symbolic">
+            <span class="boxcheckmark"></span>
+          </label>
+        </div>
 
-        </br>
+        <div class="form-group">
+          <p>Are there any South-East Asian products that you would like to get
+            that you cannot easily find near your home ?<span class="small">*</span></p>
+          <label class="lblradio">Yes
+            <input type="radio" name="find" value="yes" required>
+            <span class="radiocheckmark"></span>
+          </label>
+          <label class="lblradio">No
+            <input type="radio" name="find" value="no">
+            <span class="radiocheckmark"></span>
+          </label>
+        </div>
 
-        <p>Are there any South-East Asian products that you would like to get
-          that you cannot easily find near your home ?</p>
-        <label class="lblradio">Yes
-          <input type="radio" name="find" required>
-          <span class="radiocheckmark"></span>
-        </label>
-        <label class="lblradio">No
-          <input type="radio" name="find">
-          <span class="radiocheckmark"></span>
-        </label></br>
+        <div class="form-group">
+          <p>If so, what are these products / food / clothing / accessories...?</p>
+          <input type="text" id="products" name="products" placeholder="Your answer">
+        </div>
 
-        <p>If so, what are these products / food / clothing / accessories...?</p>
-        <input type="text" id="products" name="products" placeholder="Your answer"></br>
+        <div class="form-group">
+          <p>What are your buying motivations when looking for Southeast Asian products?<span class="small">*</span></p>
+          <label class="lblcheckbox">Personal purchase
+            <input type="checkbox" value="personal">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Need for a special occasion
+            <input type="checkbox" value="occasion">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">Make a present
+            <input type="checkbox" value="present">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">I am not interested in South-East Asian products.
+            <input type="checkbox" value="notinterested">
+            <span class="boxcheckmark"></span>
+          </label>
+        </div>
 
+        <div class="form-group">
+          <p>What is the price range you would pay for products from Asia ?<span class="small">*</span></p>
+          <label class="lblcheckbox">Less than 5 dollars
+            <input type="checkbox" value="lessfive">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">5 to 10 dollars
+            <input type="checkbox" value="fivetoten">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">10 to 20 dollars
+            <input type="checkbox" value="tentotwenty">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">20 to 30 dollars
+            <input type="checkbox" value="twentytothirty">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">30 to 50 dollars
+            <input type="checkbox" value="thirtytofifty">
+            <span class="boxcheckmark"></span>
+          </label>
+          <label class="lblcheckbox">50 dollars and more
+            <input type="checkbox" value="fiftymore">
+            <span class="boxcheckmark"></span>
+          </label>
+        </div>
 
-        <p>What are your buying motivations when looking for Southeast Asian products?</p>
-        <label class="lblcheckbox">Personal purchase
-          <input type="checkbox" value="personal">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Need for a special occasion
-          <input type="checkbox" value="occasion">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">Make a present
-          <input type="checkbox" value="present">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">I am not interested in South-East Asian products.
-          <input type="checkbox" value="notinterested">
-          <span class="boxcheckmark"></span>
-        </label></br>
-
-        <p>What is the price range you would pay for products from Asia ?</p>
-        <label class="lblcheckbox">Less than 5 dollars
-          <input type="checkbox" value="lessfive">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">5 to 10 dollars
-          <input type="checkbox" value="fivetoten">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">10 to 20 dollars
-          <input type="checkbox" value="tentotwenty">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">20 to 30 dollars
-          <input type="checkbox" value="twentytothirty">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">30 to 50 dollars
-          <input type="checkbox" value="thirtytofifty">
-          <span class="boxcheckmark"></span>
-        </label>
-        <label class="lblcheckbox">50 dollars and more
-          <input type="checkbox" value="fiftymore">
-          <span class="boxcheckmark"></span>
-        </label></br>
-
-        <label for="suggestion">How would you improve the current DOMREI website ?</label></br></br>
-        <textarea id="suggestion" name="suggestion" placeholder="Enter your comment here..." rows="4" cols="60"></textarea></br>
-
-        </br>
-        <p>This form is now complete, thank you very much for your involvement.</p></br>
-        <input id="submit" type="submit" value="Submit">
+        <div class="form-group">
+          <label for="suggestion">How would you improve the current DOMREI website ?</label></br></br>
+          <textarea id="suggestion" name="suggestion" placeholder="Enter your comment here..." rows="5" cols="60"></textarea>
+          </br>
+        </div>
+        <div class="form-group">
+          <p>This form is now complete, thank you very much for your involvement.</p>
+          <input id="submit" type="submit" value="Submit">
+        </div>
       </form>
     </div>
-    <footer><p id="author">coded by Monica Tevy</p></footer>
+    <footer>
+    <p id="author">coded by Monica Tevy</p>
+    </footer>
   </body>
 </html>
