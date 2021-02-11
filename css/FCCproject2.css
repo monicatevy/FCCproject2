@@ -3,11 +3,12 @@
   --darkergreen: #084938;
   --blue: #E6F1F0;
   --beige: #FFFAF6;
+  --text: #202124;
 }
 
 html * {
   font-family: 'Open Sans',Helvetica, sans-serif;
-  color: #202124;
+  color: var(--text);
   box-sizing: border-box;
 }
 
@@ -15,8 +16,20 @@ body {
   background-color: var(--blue);
 }
 
-#title {
+.divcontainer {
+  background-color: var(--beige);
+  border-radius: 45px;
+  margin: -5px 200px 60px 200px;
+}
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 #description {
@@ -24,37 +37,10 @@ body {
   font-weight: bolder;
 }
 
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.divcontainer {
-  /*
-  border-radius: 5px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  box-shadow: 18px 5px 5px white;
-  */
-  background-color: var(--beige);
-  border-radius: 45px;
-  margin: -5px 200px 60px 200px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .form-group {
   display: block;
   justify-content: center;
-  margin: 40px 100px 0px 100px;
+  margin: 40px 110px 0px 110px;
 }
 
 input[type=text], input[type=email], input[type=number], select {
@@ -67,17 +53,21 @@ input[type=text], input[type=email], input[type=number], select {
   box-sizing: border-box;
 }
 
+/* required * */
 .small {
   font-size: smaller;
   margin-left: 0.25rem;
   color: red;
 }
 
+/* Age (optional) */
 #number-label .small {
   color: gray;
 }
 
-/* RADIO BUTTON Customize the label */
+/*================================================
+        RADIO BUTTON Customize the label
+==================================================*/
 .lblradio {
   display: block;
   position: relative;
@@ -140,7 +130,9 @@ input[type=text], input[type=email], input[type=number], select {
 	background: white;
 }
 
-/* CHECKBOX Customize the label */
+/*================================================
+          CHECKBOX Customize the label
+==================================================*/
 .lblcheckbox {
   display: block;
   position: relative;
@@ -208,6 +200,7 @@ input[type=text], input[type=email], input[type=number], select {
   transform: rotate(45deg);
 }
 
+/* css transition effect underline */
 #products {
   border: none;
   outline: none;
@@ -225,12 +218,23 @@ input[type=text], input[type=email], input[type=number], select {
   border-bottom: var(--darkergreen);
 }
 
+/* text area */
 #suggestion {
   width: 100%;
   padding: 10px 10px;
   border-radius: 5px;
 }
 
+/* link website + hover */
+a {
+  color: gray;
+}
+
+a:hover {
+  color: var(--darkergreen);
+}
+
+/* Submit button */
 input[type=submit] {
   width: 100%;
   background-color: var(--green);
