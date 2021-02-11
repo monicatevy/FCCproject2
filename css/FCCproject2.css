@@ -43,7 +43,7 @@ img {
   margin: 40px 110px 0px 110px;
 }
 
-input[type=text], input[type=email], input[type=number], select {
+input[type=text], input[type=email], input[type=number], #dropdown {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
